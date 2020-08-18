@@ -1,0 +1,65 @@
+#INCIALIZO UN DIRECTORIO,CREO 2 DIRECTORIOS,2 COMMITS
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta>mkdir proyectorama
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta>
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta>cd proyectorama
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git init
+Initialized empty Git repository in C:/Users/Bryan Jácome Tumbaco/Desktop/Nueva carpeta/proyectorama/.git/
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>copy con "Archivo1.txt"
+^Z
+        1 archivo(s) copiado(s).
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git add .
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git commit -m "Añado el archivo1"
+[master (root-commit) 8946784] Añado el archivo1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Archivo1.txt
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>copy con "Archivo2.txt"
+^Z
+        1 archivo(s) copiado(s).
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git add .
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git commit -m "Añado el archivo2"
+[master a9277fe] Añado el archivo2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Archivo2.txt
+ 
+ #COMPRUEBO EL HISTORIAL DEL REPOSITORIO
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git log --oneline
+a9277fe (HEAD -> master) A<C3><B1>ado el archivo2
+8946784 A<C3><B1>ado el archivo1
+
+#VEO LAS RAMAS
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama>git branch
+* master
+
+#ME DIRIJO A LA CARPETA HEAD Y COMPRUEBO SU CONTENID
+ Directorio de C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git>type head
+ref: refs/heads/master
+#NOS DESPLAZAMOS HACI EL ARCHIVO MASSTER Y VEMOS SU CONTENIDO
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads>type master
+a9277fe2de5517e043a2be75893f90dd9e0d0ede
+
+#CREAMOS UNA NUEVA RAMA
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads>git branch pruebas
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads>git branch
+* master
+  pruebas
+  
+  #INSPECCIONO LA CARPETA
+  C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads>DIR
+ El volumen de la unidad C es Windows
+ El número de serie del volumen es: 96DE-20EA
+
+ Directorio de C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads
+
+18/08/2020  15:03    <DIR>          .
+18/08/2020  15:03    <DIR>          ..
+18/08/2020  14:39                41 master
+18/08/2020  15:03                41 pruebas
+               2 archivos             82 bytes
+               2 dirs  67.198.840.832 bytes libres
+
+#INSPECCIONO EL CONTENIDO DEL NUEVO ARCHIVO
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\proyectorama\.git\refs\heads>TYPE PRUEBAS
+a9277fe2de5517e043a2be75893f90dd9e0d0ede
